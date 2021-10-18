@@ -1,0 +1,115 @@
+.song-item {
+  height: 54px;
+  display: grid;
+  grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(
+      120px,
+      1fr
+    );
+  grid-gap: 16px;
+  padding: 0 16px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #b3b3b3;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.song-item div {
+  display: flex;
+  align-items: center;
+}
+
+.song-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.song-item:hover .index span {
+  display: none;
+}
+.song-item:hover .index button {
+  display: inline-block;
+}
+
+.song-item__index {
+  position: relative;
+  display: inline-block;
+}
+.song-item__index span {
+  display: inline-block;
+  position: absolute;
+}
+
+.song-item__index button {
+  position: absolute;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: #fff;
+  display: none;
+}
+.song-item__title {
+  display: flex;
+  align-items: center;
+}
+.song-item__title img {
+  height: 40px;
+  object-fit: cover;
+  margin-right: 16px;
+}
+.song-item__title .name-container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 40px;
+}
+.song-item__title .name-container span {
+  font-size: 14px;
+  font-weight: 400;
+}
+.song-item__title .name-container .name {
+  grid-area: title;
+  color: #fff;
+}
+.song-item__title .name-container .name span {
+  font-size: 16px;
+  font-weight: 400;
+}
+.song-item__title .name-container .explicit {
+  grid-area: badges;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #121212;
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 9px !important;
+  line-height: 10px;
+  min-width: 14px;
+  height: 16px;
+  padding: 0 2px;
+}
+.song-item__title .name-container .artist {
+}
+.song-item__title .name-container .artist-sub {
+}
+.song-item__title .name-container .artist-badge {
+}
+.song-item__length {
+  display: flex;
+  justify-self: end;
+}
+.song-item__length .more {
+  background: transparent;
+  border: 0;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  opacity: 0;
+}
+.disabled {
+  cursor: not-allowed !important;
+}
