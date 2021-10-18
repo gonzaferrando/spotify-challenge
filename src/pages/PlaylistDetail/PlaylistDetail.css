@@ -75,10 +75,7 @@
 .playlist-detail__list .heading {
   display: grid;
   gap: 16px;
-  grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(
-      120px,
-      1fr
-    );
+  grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [var3] 30px [last] 12px;
   padding: 0 16px;
   height: 32px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

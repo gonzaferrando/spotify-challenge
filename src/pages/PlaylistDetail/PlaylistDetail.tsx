@@ -58,6 +58,7 @@ const PlaylistDetail: React.FC<RouteComponentProps<Props>> = ({ id }) => {
                 <div className="length">
                   <Time />
                 </div>
+                <div></div>
               </div>
             </div>
 

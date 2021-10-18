@@ -1,8 +1,9 @@
-import { Play } from "../../../assets/Play";
-import { Track } from "../../../types/Track";
-import { formatDate } from "../../../utils/formatDate";
-import { millisToMinutesAndSeconds } from "../../../utils/msToMinutes";
+import { Play } from "../../assets/Play";
+import { Track } from "../../types/Track";
+import { formatDate } from "../../utils/formatDate";
+import { millisToMinutesAndSeconds } from "../../utils/msToMinutes";
 import "./SongItem.css";
+import SongMenu from "./SongMenu";
 
 type SongItemPros = {
   song: Track;
@@ -20,12 +21,12 @@ export const SongItem = ({
   return (
     <>
       {song && (
-        <div className={"song-item enabled"} onClick={songClicked}>
+        <div className={"song-item"}>
           <div className="song-item__index">
             <span style={current ? { color: "#1db954" } : { color: "white" }}>
               {index + 1}
             </span>
-            <button>
+            <button onClick={songClicked}>
               <Play />
             </button>
           </div>
@@ -42,11 +43,13 @@ export const SongItem = ({
               <div className="artist">{song.artist.name}</div>
             </div>
           </div>
-          <div>{song.album.name}</div>
-          <div>{formatDate(song.added_at)}</div>
+          <div className="song-item__album">{song.album.name}</div>
+          <div className="song-item__date">{formatDate(song.added_at)}</div>
           <div className="song-item__length">
             {millisToMinutesAndSeconds(song.duration_ms)}
-            <button className="more">...</button>
+          </div>
+          <div className="song-item__more">
+            <SongMenu />
           </div>
         </div>
       )}

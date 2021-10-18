@@ -1,10 +1,7 @@
 .song-item {
   height: 54px;
   display: grid;
-  grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [last] minmax(
-      120px,
-      1fr
-    );
+  grid-template-columns: [index] 16px [first] 6fr [var1] 4fr [var2] 3fr [var3] 30px [last] 12px;
   grid-gap: 16px;
   padding: 0 16px;
 
@@ -13,10 +10,13 @@
   line-height: 16px;
   color: #b3b3b3;
   border-radius: 4px;
-  cursor: pointer;
 }
 
-.song-item div {
+.song-item__index,
+.song-item__album,
+.song-item__date,
+.song-item__length,
+.song-item__more {
   display: flex;
   align-items: center;
 }
@@ -24,20 +24,12 @@
 .song-item:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-.song-item:hover .index span {
+.song-item:hover .song-item__index span {
   display: none;
 }
-.song-item:hover .index button {
+.song-item:hover .song-item__index button {
   display: inline-block;
-}
-
-.song-item__index {
-  position: relative;
-  display: inline-block;
-}
-.song-item__index span {
-  display: inline-block;
-  position: absolute;
+  cursor: pointer;
 }
 
 .song-item__index button {

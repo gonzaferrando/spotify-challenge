@@ -51,4 +51,4 @@ const App: React.FC<RouteComponentProps> = () => {
   );
 };
 
-export default App;
+export default React.memo(App);
