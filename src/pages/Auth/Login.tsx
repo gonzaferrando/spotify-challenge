@@ -10,8 +10,7 @@ const Login: React.FC<RouteComponentProps> = () => {
   const { login } = useContext(AuthContext);
   const [email, setEmail] = useState("");
 
-  console.log("email", email);
-  const onSubmit = async (e: React.FormEvent) => {
+  const onSubmit = async () => {
     login({ email: email } as User);
     navigate("/playlists");
   };
@@ -22,7 +21,7 @@ const Login: React.FC<RouteComponentProps> = () => {
         <div id="logo"></div>
       </div>
       <div id="main">
-        <form onSubmit={(e) => onSubmit(e)} id="form">
+        <form onSubmit={() => onSubmit()} id="form">
           <input
             name="input"
             placeholder="Email"
@@ -34,19 +33,6 @@ const Login: React.FC<RouteComponentProps> = () => {
         </form>
       </div>
     </div>
-    // <div className="login-container">
-    //   <form onSubmit={(e) => onSubmit(e)} className="login">
-    //     <label>
-    //       Email:
-    //       <input
-    //         placeholder="Your email"
-    //         name="email"
-    //         onChange={(e) => setEmail(e.target.value)}
-    //       />
-    //     </label>
-    //     <button type="submit">Login</button>
-    //   </form>
-    // </div>
   );
 };
 

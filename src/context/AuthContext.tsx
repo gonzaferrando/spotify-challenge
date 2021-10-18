@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from "react";
-import { useLocalStorage } from "../helpers/useLocalStorage";
+import { useLocalStorage } from "../hooks/useLocalStorage";
 import { User } from "../types/Auth";
 
 interface IAuthContext {
@@ -12,10 +12,10 @@ const AuthContext = createContext<IAuthContext>({} as IAuthContext);
 
 const AuthProvider: React.FC = ({ children }) => {
   const [authenticatedUser, setAuthenticatedUser] =
-    useLocalStorage<User | null>("user", {} as User);
+    useLocalStorage<User | null>("spotify-player.user", {} as User);
 
   const login = (user: User) => setAuthenticatedUser(user);
-  const logout = () => setAuthenticatedUser(null);
+  const logout = () => localStorage.removeItem("spotify-player.user");
 
   return (
     <AuthContext.Provider
