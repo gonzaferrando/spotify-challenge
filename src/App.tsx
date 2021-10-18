@@ -30,7 +30,6 @@ const Authenticated: React.FC = () => {
     <PlaylistProvider>
       <SideBar />
       <Router>
-        <Redirect from="login" to="/playlists" noThrow />
         <Redirect from="/" to="/playlists" noThrow />
         <Pages.Playlists path="/playlists" />
         <Pages.PlaylistDetails path="/playlist/:id" />
