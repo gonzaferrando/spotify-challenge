@@ -74,25 +74,26 @@
   transition: none 33ms cubic-bezier(0.3, 0, 0, 1);
   transition-property: all;
 }
-.player__controls .BarContainer {
+.player__controls .barContainer {
   display: flex;
   width: 100%;
   align-items: center;
+  justify-content: center;
 }
-.player__controls .BarContainer div {
+.player__controls .barContainer div {
   min-width: 40px;
   text-align: center;
   font-size: 11px;
   font-weight: 400;
   color: #b3b3b3;
 }
-.player__controls .BarContainer .wrapper {
+.player__controls .barContainer .wrapper {
   width: 100%;
 }
-.player__controls .BarContainer .wrapper .bar {
+.player__controls .barContainer .wrapper .bar {
   width: 100%;
 }
-.player__controls .BarContainer .wrapper .bar .progress {
+.player__controls .barContainer .wrapper .bar .progress {
   transform: translateX(-100%);
 }
 .player__volume {

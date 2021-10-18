@@ -6,7 +6,7 @@ import { Volume } from "../../assets/Volume";
 import { useBar } from "../../utils/useBar";
 import { VolumeMuted } from "../../assets/VolumeMuted";
 
-import "./Player.css";
+import "./index.css";
 import { PlaylistContext } from "../../context/PlaylistContext";
 
 const Player: React.FC = () => {

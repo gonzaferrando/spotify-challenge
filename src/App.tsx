@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect, RouteComponentProps, Router } from "@reach/router";
 import * as Pages from "./pages";
 import SideBar from "./components/SideBar/SideBar";
-import Player from "./components/Player/Player";
+import Player from "./components/Player";
 import { PlaylistProvider } from "./context/PlaylistContext";
 import { AuthProvider } from "./context/AuthContext";
 
