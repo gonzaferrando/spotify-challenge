@@ -1,4 +1,4 @@
-import { Track } from "../types/Track";
+import { Track } from "../types/Playlist";
 
 export const AvailableTracks: Track[] = [
   {

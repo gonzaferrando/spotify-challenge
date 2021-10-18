@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState } from "react";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { Playlist } from "../types/Playlist";
-import { Track } from "../types/Track";
+import { Track } from "../types/Playlist";
 
 import { AvailablePlaylists } from "../data/playlists";
 

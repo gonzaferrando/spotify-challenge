@@ -37,7 +37,7 @@ const SideBar = () => {
           window.location.reload();
         }}
       >
-        Logout
+        Log out
       </button>
     </div>
   );

@@ -1,5 +1,5 @@
 import { Play } from "../../assets/Play";
-import { Track } from "../../types/Track";
+import { Track } from "../../types/Playlist";
 import { formatDate } from "../../utils/formatDate";
 import { millisToMinutesAndSeconds } from "../../utils/msToMinutes";
 import "./SongItem.css";
@@ -49,7 +49,7 @@ export const SongItem = ({
             {millisToMinutesAndSeconds(song.duration_ms)}
           </div>
           <div className="song-item__more">
-            <SongMenu />
+            <SongMenu song={song} />
           </div>
         </div>
       )}

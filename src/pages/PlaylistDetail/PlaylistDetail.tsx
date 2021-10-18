@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { RouteComponentProps } from "@reach/router";
 import { SongItem } from "../../components/Playlist/SongItem";
 import { Time } from "../../assets/Time";
-import { Track } from "../../types/Track";
+import { Track } from "../../types/Playlist";
 import { Playlist } from "../../types/Playlist";
 import { PlaylistContext } from "../../context/PlaylistContext";
 
