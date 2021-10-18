@@ -31,7 +31,7 @@ const Authenticated: React.FC = () => {
       <SideBar />
       <Router>
         <Redirect from="login" to="/playlists" noThrow />
-        <Redirect from="/" to="/playlist" noThrow />
+        <Redirect from="/" to="/playlists" noThrow />
         <Pages.Playlists path="/playlists" />
         <Pages.PlaylistDetails path="/playlist/:id" />
       </Router>

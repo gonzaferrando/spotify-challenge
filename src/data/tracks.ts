@@ -64,4 +64,46 @@ export const AvailableTracks: Track[] = [
     preview_url: "",
     added_at: "01-01-2000",
   },
+  {
+    album: {
+      image: {
+        height: 100,
+        width: 100,
+        url: "https://i.scdn.co/image/ab67616d00001e029ad3e9959f48d513886b8933",
+      },
+      name: "Ride The Lightning",
+    },
+    artist: {
+      name: "Metallica",
+    },
+    disc_number: 1,
+    duration_ms: 170000,
+    id: "4",
+    name: "Fight Fire with Fire",
+    track: true,
+    track_number: 1,
+    preview_url: "",
+    added_at: "01-01-2000",
+  },
+  {
+    album: {
+      image: {
+        height: 100,
+        width: 100,
+        url: "https://i.scdn.co/image/ab67616d00001e029ad3e9959f48d513886b8933",
+      },
+      name: "Ride The Lightning",
+    },
+    artist: {
+      name: "Metallica",
+    },
+    disc_number: 1,
+    duration_ms: 170000,
+    id: "5",
+    name: "For Whom The Bell Tolls",
+    track: true,
+    track_number: 2,
+    preview_url: "",
+    added_at: "01-01-2000",
+  },
 ];

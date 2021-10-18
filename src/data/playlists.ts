@@ -17,7 +17,7 @@ export const AvailablePlaylists: Playlist[] = [
     },
     tracks: {
       total: 1,
-      items: [AvailableTracks[0]],
+      items: [AvailableTracks[0], AvailableTracks[4]],
       limit: 5,
       next: "",
       offset: 1,
@@ -39,7 +39,7 @@ export const AvailablePlaylists: Playlist[] = [
     },
     tracks: {
       total: 1,
-      items: [AvailableTracks[1], AvailableTracks[2]],
+      items: [AvailableTracks[1], AvailableTracks[2], AvailableTracks[3]],
       limit: 5,
       next: "",
       offset: 1,

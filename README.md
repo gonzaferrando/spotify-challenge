@@ -37,6 +37,7 @@ Since this challenge requires not to use any external library (Redux, Sass, etc)
 
 - Some components are using BEM for managing classes. Some others don't.
 - Some components are created at index.tsx, some others don't.
+- No unit test created.
 
 ### Want to see how it works?
 
