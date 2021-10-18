@@ -35,3 +35,14 @@
   overflow-x: hidden;
   max-height: 600px;
 }
+
+#logout-button {
+  display: flex;
+  background: none;
+  border: none;
+  padding: 0;
+  color: #b3b3b3;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 20px auto 0 auto;
+}

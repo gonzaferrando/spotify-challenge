@@ -29,7 +29,9 @@ const Login: React.FC<RouteComponentProps> = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <input name="input" placeholder="Password" type="password" />
-          <input name="login" type="submit" value="Log in" />
+          <button name="login" type="submit" className="button-main">
+            Log in
+          </button>
         </form>
       </div>
     </div>

@@ -9,13 +9,14 @@ interface IAuthContext {
 }
 
 const AuthContext = createContext<IAuthContext>({} as IAuthContext);
+const localStorageAuthUserKey = "spotify-player.user";
 
 const AuthProvider: React.FC = ({ children }) => {
   const [authenticatedUser, setAuthenticatedUser] =
-    useLocalStorage<User | null>("spotify-player.user", {} as User);
+    useLocalStorage<User | null>(localStorageAuthUserKey, {} as User);
 
   const login = (user: User) => setAuthenticatedUser(user);
-  const logout = () => localStorage.removeItem("spotify-player.user");
+  const logout = () => localStorage.removeItem(localStorageAuthUserKey);
 
   return (
     <AuthContext.Provider

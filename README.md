@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
 
-## Available Scripts
+Your task is to implement a simple Spotify Playlist Creator in React + Typescript without using any libraries (other than React)
+Minimum requirements:
 
-In the project directory, you can run:
+- You must use Typescript.
+- You must use Spotify’s public API.
+- There should be a login screen.
+- Once logged in, there should be a screen where you can see the current song you are playing on Spotify (The app) - We will judge the amount of info/design choices you make on this screen.
+- There needs to be a button to add the song to a playlist on the current playing screen, and the user should be able to add a name to the playlist or select from a list of created playlists.
+  NOTE: We prefer you to create the playlists without using Spotify’s API (see bonus points). But bear in mind that the playlists need to be persisted for future uses.
+- There should be a screen that shows the list of playlists.
+- When a user clicks on one of the playlists, show the list of songs.
 
-### `yarn start`
+Bonus points
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- You can remove songs from playlists.
+- You can remove playlists.
+- You don’t use Spotify’s API for playlists :)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Gonzalo's Notes
 
-### `yarn test`
+### Tech stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Since this challenge requires not to use any external library (Redux, Sass, etc), I've decided to use:
 
-### `yarn build`
+- React
+- Typescript
+- Plain css
+- Reach/Router
+- Context Api
+- localStorage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### IMPORTANT!
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Some components are using BEM for managing classes. Some others don't.
+- Some components are created at index.tsx, some others don't.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Want to see how it works?
 
-### `yarn eject`
+First time running this project:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+yarn install
+yarn start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Then, only:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+yarn start
+```

@@ -29,19 +29,12 @@ const SideBar = () => {
           })}
         </ul>
       </div>
-      <Link
-        to="/login"
-        onClick={() => {
-          logout();
-          // navigate("/login");
-        }}
-      >
-        Logout
-      </Link>
       <button
+        id="logout-button"
         onClick={() => {
           logout();
-          // navigate("/login");
+          // Since SideBar does not belong to a Routed component, refreshing the page will check credentials
+          window.location.reload();
         }}
       >
         Logout
