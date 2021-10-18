@@ -1,6 +1,6 @@
 .side-bar-list-item .item {
   min-height: 32px;
-  padding: 10px 0 10px 30px;
+  padding: 5px 0 5px 30px;
 }
 .side-bar-list-item .item:hover span {
   color: #fff;
