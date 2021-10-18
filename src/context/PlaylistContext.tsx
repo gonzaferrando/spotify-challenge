@@ -16,7 +16,7 @@ interface IPlaylistContext {
 const PlaylistContext = createContext<IPlaylistContext>({} as IPlaylistContext);
 
 const PlaylistProvider: React.FC = ({ children }) => {
-  const [playlistData, setPlaylistData] = useLocalStorage(
+  const [playlistData] = useLocalStorage(
     "spotify-player.playlists",
     AvailablePlaylists
   );

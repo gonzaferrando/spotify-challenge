@@ -1,4 +1,4 @@
-export declare interface Track {
+export interface Track {
   album: {
     image: {
       height: number;

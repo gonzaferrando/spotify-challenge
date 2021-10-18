@@ -38,6 +38,7 @@ Since this challenge requires not to use any external library (Redux, Sass, etc)
 - Some components are using BEM for managing classes. Some others don't.
 - Some components are created at index.tsx, some others don't.
 - No unit test created.
+- Login: No validation applied. You just need to complete with any email and then press "Login" button.
 
 ### Want to see how it works?
 

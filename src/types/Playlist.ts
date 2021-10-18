@@ -1,6 +1,6 @@
 import { Track } from "./Track";
 
-export declare interface Playlist {
+export interface Playlist {
   description: string;
   id: string;
   image: {

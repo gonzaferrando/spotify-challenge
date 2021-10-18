@@ -19,69 +19,63 @@ const Player: React.FC = () => {
   const barCallBack = useBar;
 
   useEffect(() => {
-    if (volume < 5) {
-      setMute(true);
-    } else {
-      setMute(false);
-    }
+    setMute(volume < 5);
   }, [volume]);
 
-  if (!currentSong) {
-    return null;
-  } else {
-    return (
-      <div className="player">
-        <footer>
-          <div className="player__song">
-            <div className="img">
-              <img src={currentSong.album.image.url} alt="song" />
-            </div>
-            <div className="infos">
-              <div className="name">{currentSong.name}</div>
-              <div className="artist">{currentSong.artist.name}</div>
-            </div>
-            <div className="like">
-              <Like />
-            </div>
-          </div>
+  if (!currentSong) return null;
 
-          <div className="player__controls">
-            <div>
-              <button onClick={playPause}>
-                {isPlaying ? <Pause /> : <Play />}
-              </button>
-            </div>
-            <div className="barContainer">
-              <div>0:00</div>
-            </div>
+  return (
+    <div className="player">
+      <footer>
+        <div className="player__song">
+          <div className="img">
+            <img src={currentSong.album.image.url} alt="song" />
           </div>
+          <div className="infos">
+            <div className="name">{currentSong.name}</div>
+            <div className="artist">{currentSong.artist.name}</div>
+          </div>
+          <div className="like">
+            <Like />
+          </div>
+        </div>
 
-          <div className="player__volume">
-            <div>
-              <button onClick={() => setMute(!mute)}>
-                {mute ? <VolumeMuted /> : <Volume />}
-              </button>
-            </div>
-            <div
-              className="player__volume-wrapper"
-              onClick={(event) => barCallBack(event, volumeRef, setVolume)}
-              ref={volumeRef}
-            >
-              <div className="bar">
-                <div
-                  className="progress"
-                  style={{
-                    transform: `translateX(-${mute ? "100" : 100 - volume}%)`,
-                  }}
-                />
-              </div>
-              <button style={{ left: `${mute ? "0" : volume}%` }} />
-            </div>
+        <div className="player__controls">
+          <div>
+            <button onClick={playPause}>
+              {isPlaying ? <Pause /> : <Play />}
+            </button>
           </div>
-        </footer>
-      </div>
-    );
-  }
+          <div className="barContainer">
+            <div>0:00</div>
+          </div>
+        </div>
+
+        <div className="player__volume">
+          <div>
+            <button onClick={() => setMute(!mute)}>
+              {mute ? <VolumeMuted /> : <Volume />}
+            </button>
+          </div>
+          <div
+            className="player__volume-wrapper"
+            onClick={(event) => barCallBack(event, volumeRef, setVolume)}
+            ref={volumeRef}
+          >
+            <div className="bar">
+              <div
+                className="progress"
+                style={{
+                  transform: `translateX(-${mute ? "100" : 100 - volume}%)`,
+                }}
+              />
+            </div>
+            <button style={{ left: `${mute ? "0" : volume}%` }} />
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
 };
 
 export default Player;

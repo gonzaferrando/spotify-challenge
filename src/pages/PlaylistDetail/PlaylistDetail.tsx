@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { RouteComponentProps } from "@reach/router";
 import { SongItem } from "../../components/Playlist/SongItem";
 import { Time } from "../../assets/Time";
@@ -16,11 +16,10 @@ const PlaylistDetail: React.FC<RouteComponentProps<Props>> = ({ id }) => {
   const { currentSong, playlistData, setCurrentSong } =
     useContext(PlaylistContext);
   const [playlist, setPlaylist] = useState<Playlist | null>();
-  const coverRef = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
     setPlaylist(playlistData.find((playlist) => playlist.id === id));
-  }, [id]);
+  }, [setPlaylist, playlistData, id]);
 
   return (
     <>
@@ -29,7 +28,7 @@ const PlaylistDetail: React.FC<RouteComponentProps<Props>> = ({ id }) => {
           <div className="playlist-detail__cover">
             <div className="playlist-detail__cover-gradient"></div>
             <div className="playlist-detail__cover-img">
-              <img src={playlist.image.url} alt="playlist img" ref={coverRef} />
+              <img src={playlist.image.url} alt="playlist img" />
             </div>
             <div className="playlist-detail__info">
               <div className="playlist-detail__info-name">PLAYLIST</div>
