@@ -3,7 +3,7 @@ import { availableTracks } from "./tracks";
 
 export const availablePlaylists: Playlist[] = [
   {
-    description: "Favourites",
+    description: "These are my favourites songs",
     id: "1",
     image: {
       height: 30,
@@ -25,7 +25,7 @@ export const availablePlaylists: Playlist[] = [
     },
   },
   {
-    description: "Rock stars",
+    description: "Miscellaneous",
     id: "2",
     image: {
       height: 30,
