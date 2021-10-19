@@ -1,6 +1,6 @@
 import { Track } from "../types/Playlist";
 
-export const AvailableTracks: Track[] = [
+export const availableTracks: Track[] = [
   {
     album: {
       image: {

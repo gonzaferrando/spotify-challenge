@@ -54,3 +54,7 @@ Then, only:
 ```sh
 yarn start
 ```
+
+### Clean up data
+
+Open local storage, find key **spotify-player.playlists** and remove it. Refresh page to reload all data.

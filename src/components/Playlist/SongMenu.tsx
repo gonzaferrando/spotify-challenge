@@ -9,7 +9,7 @@ interface SongMenuOptions {
 }
 
 const SongMenu: React.FC<SongMenuOptions> = ({ song }) => {
-  const { playlistData } = useContext(PlaylistContext);
+  const { playlistData, addSongToPlaylist } = useContext(PlaylistContext);
 
   return (
     <div className="song-menu">
@@ -18,8 +18,9 @@ const SongMenu: React.FC<SongMenuOptions> = ({ song }) => {
         <div className="song-menu__title">Add song to playlist</div>
         {playlistData?.map((playlist) => (
           <div
+            key={playlist.id}
             className="song-menu__option"
-            onClick={() => alert(`Clicking ${playlist.id}, song ${song.id}`)}
+            onClick={() => addSongToPlaylist(song.id, playlist.id)}
           >
             {playlist.name}
           </div>

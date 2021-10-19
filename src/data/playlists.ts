@@ -1,7 +1,7 @@
 import { Playlist } from "../types/Playlist";
-import { AvailableTracks } from "./tracks";
+import { availableTracks } from "./tracks";
 
-export const AvailablePlaylists: Playlist[] = [
+export const availablePlaylists: Playlist[] = [
   {
     description: "My playlist 1",
     id: "1",
@@ -17,7 +17,7 @@ export const AvailablePlaylists: Playlist[] = [
     },
     tracks: {
       total: 1,
-      items: [AvailableTracks[0], AvailableTracks[4]],
+      items: [availableTracks[0], availableTracks[4]],
       limit: 5,
       next: "",
       offset: 1,
@@ -39,7 +39,7 @@ export const AvailablePlaylists: Playlist[] = [
     },
     tracks: {
       total: 1,
-      items: [AvailableTracks[1], AvailableTracks[2], AvailableTracks[3]],
+      items: [availableTracks[1], availableTracks[2], availableTracks[3]],
       limit: 5,
       next: "",
       offset: 1,
