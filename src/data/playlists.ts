@@ -3,14 +3,14 @@ import { availableTracks } from "./tracks";
 
 export const availablePlaylists: Playlist[] = [
   {
-    description: "My playlist 1",
+    description: "Favourites",
     id: "1",
     image: {
       height: 30,
       width: 30,
-      url: "https://i.scdn.co/image/ab67616d00001e02668e3aca3167e6e569a9aa20",
+      url: "https://i.scdn.co/image/ab67706c0000bebb858d10353ae4a5f3942d0a06",
     },
-    name: "My playlist 1",
+    name: "Favourites",
     owner: {
       display_name: "Gonzalo",
       id: "1",
@@ -25,14 +25,14 @@ export const availablePlaylists: Playlist[] = [
     },
   },
   {
-    description: "My playlist 2",
+    description: "Rock stars",
     id: "2",
     image: {
       height: 30,
       width: 30,
-      url: "https://i.scdn.co/image/ab67616d00001e02668e3aca3167e6e569a9aa20",
+      url: "https://i.scdn.co/image/ab67706f000000035ec9a70cbcdd04c17a264f4c",
     },
-    name: "My playlist 2",
+    name: "Rock stars",
     owner: {
       display_name: "Gonzalo",
       id: "1",
